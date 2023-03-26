@@ -1,0 +1,640 @@
+<!-- <!DOCTYPE html>  نعرف من حلالة ان دي صفحة html5 -->
+<html lang="en"> <!-- تحديد لغه الموقع لمحركات البحث -->
+<head> 
+    <meta charset="utf-8">      <!--  لتعريف اللغة العربية وباقي اللغات-->
+    <meta name="keywords" content="css,html,php">  <!-- الكلمات المفتاحية في البحث-->
+    <meta name="description" content="this is web site"> <!-- وصف الموقع ويكتب تحت اسمم الموقع -->
+    <meta name="author" content="Amr Ebrahim"> <!-- مولف الموقع -->
+    <meta http-equiv="refresh" content="10">  <!-- الصفحه تعمل تجديد كل كام ثانية يفضل 0 -->
+    <title>HTML CSS Template 1</title>      <!-- مهم  اسم الموقع  -->
+
+<!-- font الخط -->
+<!-- <من علي موقع الزيرو -->
+    <link href='https://fonts.googleapis.com/css?family=Alfa 
+    Slab One'rel='stylesheet'>
+    
+<!-- css files -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"> <!--  مكتبة الايقونات -->
+    <link rel="stylesheet" href="css/New Text.css">         <!-- css الرابط مع ملف  -->
+    <link rel="stylesheet" href="css/utils.css">       <!-- فيل الحاجات المشتركة -->
+    <link rel="stylesheet" href="css/offer.css">
+</head>
+
+
+<body>
+    <!-- <i class="fa fa-address-card" aria-hidden="true"> ايقونات -->
+    <!-- </i> font owesom vargen 4.7 الايقونات من  -->
+ 
+                    <!--1- Header اول حاجة بنعملها في الموقع -->
+<!-- متقسم لحاجتين صورة علي الشمال ولينكات علي اليمين -->
+<div class="header">
+<div class="contaner"> <!-- هيتكرر معايا الديف دة في كل سكشن --> 
+<!-- شان يخلي المتحوي فقط هوا الي في نص الشاشة -->
+
+                         <!-- 1- الصورة -->
+    <div class="logo">
+        <img src="images/logo-alt.webp" alt="this is logo" draggable="false"> 
+            <!-- draggable-> محدش ياخد الصورة ويجري -->
+    </div>  
+
+                         <!-- 2- اللينكات -->
+    <ul class="nav"> 
+        <li> <a href="#" class="active">Home</a> </li> <!--خد كلاس عشان هيبقا مختلف عنهم والخط موجود-->
+        <li> <a href="#">About</a> </li>
+        <li> <a href="#">Portfolio</a> </li>
+        <li> <a href="#">Services</a> </li>
+        <li> <a href="#">prices</a> </li>
+        <li> <a href="#">Team</a> </li>
+        <li class="dropdown">      <!-- dropdown القايمة المنسدلة -->
+            <a href="#">Blog</a> <!-- # مش عاوزة يروح في حتة -->
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#">blog Post</a>
+                </li>
+            </ul>   
+        </li>
+
+        <li> <a href="#">Contact</a> </li>
+    </ul>
+
+    <div class="clear"></div> <!-- float لحل مشكله ال  -->
+</div>
+</div>
+
+
+
+
+
+                               <!-- a-home sections -->
+<div class="home">
+    <div class="overlay">  <!-- عنصر فوق عنصر -->
+    <div class="home-content"> <!-- المحتوي في تلات حاجات العنوان والبراجراف والزرارين --> 
+        <h1 class="home-title"> WE ARE CREATIVE AGENCY </h1>
+        <p class="home-desc"> Lorem ipsum dolor sit 
+            amet consectetur adipisicing elit. Corrupti doloribus
+            autem cupiditate esse iste totam reprehenderit 
+            recusandae in! Ullam omnis magnam quaerat 
+            doloremque, veniam reiciendis eius iure 
+         </p>
+        <button class="btn btn-start hever-opacity">Get Started !</button> <!--واخد تلات كلاسات-->
+        <button class="btn btn-more hever-opacity">Learn more</button>     <!--واخد تلات كلاسات-->
+    </div>
+    </div> <!--  جواعشان يظهر فوق الشفافية content-homeحطيت ال -->
+</div>
+
+
+            
+<!-- scetion headar -->    <!-- كل حاجة في النص -->
+                       <!-- about scetion -->  
+
+<div class="about pd-y ">   <!-- كلاس هدي لكل السكاشن عشان يعمل مسافة فوق عنوان السكشن  --> <!--واخد كلاسين -->
+    <div class="scetion-header"> <!-- في حاجتين العنوان و الخط -->
+        <h2 class="scetion-title">welcome To website </h2> <!-- كلاس للعنوان -->
+        <span class="line"></span> <!-- كلاس للخط الي تحت العنوان -->
+    </div> <!-- ممكن يتحط جوا كلاس الcontaner عادي --> 
+
+ <!-- about scetion -->  
+    <div class="contaner "> <!-- كل حاجة تبدا من النص -->
+        <div class="about-content"> <!-- الكلاس الي شايل التلات دفات عشان اجبهم جنب بعض -->
+                <div class="about-item ltr-effect"> <!-- هدي كل خاصية كلاس عسان لما اعوز اغيرها ف css -->
+                        <i class="icon fa fa-cogs fa-2x"></i> <!-- كلاس ل ايقون-->
+                        <h2 class="title"> fully customizible</h2> <!-- العنوان -->
+                        <p class="desc"> <!-- البراجراف -->
+                            Maecenas tempus tellus eget
+                            condimentum rhoncus  sem quam
+                            semper libero sit amet
+                        </p>
+                        <a href="#" class="link">read more</a> <!-- اللينك -->
+                </div>
+                <div class="about-item spaes ltr-effect"> <!-- spses عشان اعمل مسافة حوالية -->
+                        <i class="icon fa fa-magic fa-2x"></i> <!-- كلاس ل ايقون -->
+                        <h2 class="title">awesome Features</h2>
+                        <p class="desc">
+                            Maecenas tempus tellus eget
+                            condimentum rhoncus  sem quam
+                            semper libero sit amet
+                        </p>
+                        <a href="#" class="link">read more</a>
+                </div>
+                <div class="about-item ltr-effect">
+                        <i class="icon fa fa-mobile fa-2x"></i><!-- كلاس ل ايقون -->
+                        <h2 class="title">fully responsive </h2>
+                        <p class="desc">
+                            Maecenas tempus tellus eget
+                            condimentum rhoncus  sem quam
+                            semper libero sit amet
+                        </p>
+                        <a href="#" class="link">read more</a>
+                </div>
+                <div class="clear"></div>
+        </div>
+    </div>
+</div>
+ 
+
+
+
+                <!-- portofolio scetion -->  
+<div class="portofolio pd-y bgcolor" >
+                <!-- scetion headar -->    <!-- كل حاجة في النص -->
+    <div class="scetion-header"> <!-- في حاجتين العنوان و الخط -->
+        <h2 class="scetion-title">featured works </h2> <!-- كلاس للعنوان -->
+        <span class="line"></span> <!-- كلاس للخط الي تحت العنوان -->
+    </div> <!-- ممكن يتحط جوا كلاس الcontaner عادي --> 
+
+
+    <div class="contaner "> <!-- كل حاجة تبدا من النص -->
+        <div class="portofolio-content"> <!-- الكلاس الي شايل التلات دفات عشان اجبهم جنب بعض -->
+            <div class="portofolio-item"> 
+                <img src="images/work/work1.webp" alt="">
+            <div class="layer-content">
+                <div class="layer-info">
+                    <span class="category">category</span>
+                    <h3 class="layer-content-title">Amr Ebrahim</h3>
+                    <i class="fa fa-edit fa-lg"></i>    
+                    <i class="fa fa-search fa-lg"></i>    
+                </div>
+            </div>
+            </div>
+                <div class="portofolio-item spaes"> 
+                    <img src="images/work/work2.webp" alt="">
+                    <div class="layer-content">
+                        <div class="layer-info">
+                            <span class="category">category</span>
+                            <h3 class="layer-content-title">Amr Ebrahim</h3>
+                            <i class="fa fa-edit fa-lg"></i>    
+                            <i class="fa fa-search fa-lg"></i>    
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="portofolio-item"> 
+                    <img src="images/work/work3.webp" alt=""><div class="layer-content">
+                        <div class="layer-info">
+                            <span class="category">category</span>
+                            <h3 class="layer-content-title">Amr Ebrahim</h3>
+                            <i class="fa fa-edit fa-lg"></i>    
+                            <i class="fa fa-search fa-lg"></i>    
+                        </div>
+                    </div>
+                </div>
+                <div class="portofolio-item"> 
+                    <img src="images/work/work4.webp" alt="">
+                    <div class="layer-content">
+                        <div class="layer-info">
+                            <span class="category">category</span>
+                            <h3 class="layer-content-title">Amr Ebrahim</h3>
+                            <i class="fa fa-edit fa-lg"></i>    
+                            <i class="fa fa-search fa-lg"></i>    
+                        </div>
+                    </div>
+                </div>
+                <div class="portofolio-item spaes"> 
+                    <img src="images/work/work5.webp" alt="">
+                    <div class="layer-content">
+                        <div class="layer-info">
+                            <span class="category">category</span>
+                            <h3 class="layer-content-title">Amr Ebrahim</h3>
+                            <i class="fa fa-edit fa-lg"></i>    
+                            <i class="fa fa-search fa-lg"></i>    
+                        </div>
+                    </div>
+                </div>
+                <div class="portofolio-item"> 
+                    <img src="images/work/work6.webp" alt="">
+                    <div class="layer-content">
+                        <div class="layer-info">
+                            <span class="category">category</span>
+                            <h3 class="layer-content-title">Amr Ebrahim</h3>
+                            <i class="fa fa-edit fa-lg"></i>    
+                            <i class="fa fa-search fa-lg"></i>    
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="clear"></div>   <!-- لحل مشكلة الفلوت -->
+        </div>
+    </div>
+</div>
+
+
+                <!--offer section  -->
+
+<div class="offer pd-y"> <!-- pd-y عشان يعمل مسافة من فوق ونحن بين السكاشن -->       
+        <div class="scetion-header"> <!-- في حاجتين العنوان و الخط -->
+            <h2 class="scetion-title">what we offer </h2> <!-- كلاس للعنوان -->
+            <span class="line"></span> <!-- كلاس للخط الي تحت العنوان -->
+        </div> <!-- ممكن يتحط جوا كلاس الcontaner عادي --> 
+
+        <div class="contaner">
+            <div class="offer-item ltr-effect">
+                <i class="icon fa fa-diamond fa-2x"></i>
+                <h2 class="offer-item-title">app develoment</h2>
+                <p class="offer-item-desc">
+                    Maecenas tempus tellus eget
+                    condimentum rhoncus  sem quam
+                    semper libero sit amet
+                </p>
+            </div>
+            <div class="offer-item ltr-effect space ">
+                <i class="icon fa fa-rocket fa-2x"></i>
+                <h2 class="offer-item-title">app develoment</h2>
+                <p class="offer-item-desc">
+                    Maecenas tempus tellus eget
+                    condimentum rhoncus  sem quam
+                    semper libero sit amet
+                </p>
+            </div>
+            <div class="offer-item ltr-effect">
+                <i class="icon fa fa-cogs fa-2x"></i>
+                <h2 class="offer-item-title">app develoment</h2>
+                <p class="offer-item-desc">
+                    Maecenas tempus tellus eget
+                    condimentum rhoncus  sem quam
+                    semper libero sit amet
+                </p>
+            </div>
+            <div class="offer-item ltr-effect">
+                <i class="icon fa fa-diamond fa-2x"></i>
+                <h2 class="offer-item-title">app develoment</h2>
+                <p class="offer-item-desc">
+                    Maecenas tempus tellus eget
+                    condimentum rhoncus  sem quam
+                    semper libero sit amet
+                </p>
+            </div>
+            <div class="offer-item ltr-effect space">
+                <i class="icon fa fa-pencil fa-2x"></i>
+                <h2 class="offer-item-title">app develoment</h2>
+                <p class="offer-item-desc">
+                    Maecenas tempus tellus eget
+                    condimentum rhoncus  sem quam
+                    semper libero sit amet
+                </p>
+            </div><div class="offer-item ltr-effect">
+                <i class="icon fa fa-flask fa-2x"></i>
+                <h2 class="offer-item-title">app develoment</h2>
+                <p class="offer-item-desc">
+                    Maecenas tempus tellus eget
+                    condimentum rhoncus  sem quam
+                    semper libero sit amet
+                </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+                <!--services section  -->
+<div class="services pd-y bgcolor">
+    <div class="contaner">
+        <div class="services-item">
+            <div class="scetion-header"> <!-- في حاجتين العنوان و الخط -->
+                <h2 class="scetion-title">why choose us</h2> <!-- كلاس للعنوان -->
+                <span class="line"></span> <!-- كلاس للخط الي تحت العنوان -->
+                            <!-- ممكن يتحط جوا كلاس الcontaner عادي --> 
+             </div> 
+             <p class="desc">
+                Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris. Ultrices sagittis orci a scelerisque purus.
+             </p>
+             <ul class="services-list">
+                 <li><i class="fa fa-check fa-lg"></i>Quis varius quam quisque id diam vel quam elementum.</li>
+                 <li><i class="fa fa-check fa-lg"></i>Mauris augue neque gravida in fermentum.</li>
+                 <li><i class="fa fa-check fa-lg"></i>Orci phasellus egestas tellus rutrum.</li>
+                 <li><i class="fa fa-check fa-lg"></i>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</li>
+             </ul>    
+                   
+        </div>
+        <div class="services-item">
+            <div class="services-image">
+                <img src="images/about/about2.webp" alt="">
+            </div>
+            <ul class="Services-bollets">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        </div>
+
+</div>
+
+                <!--number  section -->
+<div class="number"> <!-- واخد الصورة الباك جراوند -->
+    <div class="overlay"> <!-- دة كلاس عام بيتحط علي الصورة لتقليل الاضاءة -->
+        <div class="contaner"> <!-- عشان الموقع ميبداش من حواف الصفحة -->
+            <div class="number-item"> <!-- وياخد overflow الديف الي شايلة المحتوي -->
+                <div class="number-item-1">
+                    <i class="icon fa fa-users fa-2x"></i> <!-- كلاس و اسم الايقونة -->
+                    <h3 class="number-item-title">452</h3>
+                    <span class="number-item-desc">im happy</span>
+                </div>
+                <div class="number-item-1">
+                    <i class="icon fa fa-users fa-2x"></i>
+                    <h3 class="number-item-title">111</h3>
+                    <span class="number-item-desc">im happy</span>
+                </div>
+                <div class="number-item-1">
+                    <i class="icon fa fa-users fa-2x"></i>
+                    <h3 class="number-item-title">698K</h3>
+                    <span class="number-item-desc">im happy</span>
+                </div>
+                <div class="number-item-1">
+                    <i class="icon fa fa-users fa-2x"></i>
+                    <h3 class="number-item-title">888</h3>
+                    <span class="number-item-desc">im happy</span>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>        
+    </div>
+</div>
+
+
+                <!-- pricing section -->
+<div class="pricing pd-y">
+              <!-- scetion headar -->    <!-- كل حاجة في النص -->
+    <div class="scetion-header"> <!-- في حاجتين العنوان و الخط -->
+        <h2 class="scetion-title">pricing table </h2> <!-- كلاس للعنوان -->
+        <span class="line"></span> <!-- كلاس للخط الي تحت العنوان -->
+     </div> <!-- ممكن يتحط جوا كلاس الcontaner عادي --> 
+
+     <div class="contaner">
+            <div class="pricing-item ttb-effect" >
+                <span class="pricing-item-title">basic plan </span>
+                <div class="pricing-item-permonce">
+                    <h3 class="doler">$9</h3>
+                    <span class="month">/ month</span>
+                </div>
+                <ul class="pricing-item-list">
+                    <li>1GB Disk Space</li>
+                    <li>100 Email Account</li>
+                    <li>24/24 Support   </li>
+                </ul>
+                <button class="pricing-item-button">purchtion now</button>
+            </div>
+            <div class="pricing-item space ttb-effect" >
+                <span class="pricing-item-title">silver plan</span>
+                <div class="pricing-item-permonce">
+                    <h3 class="doler">$19</h3>
+                    <span class="month">/ month</span>
+                </div>
+                <ul class="pricing-item-list">
+                    <li>1GB Disk Space</li>
+                    <li>100 Email Account</li>
+                    <li>24/24 Support</li>
+                </ul>
+                <button class="pricing-item-button">purchtion now</button>
+            </div>
+            <div class="pricing-item ttb-effect" >
+                <span class="pricing-item-title">gold plan</span>
+                <div class="pricing-item-permonce">
+                    <h3 class="doler">$34</h3>
+                    <span class="month">/ month</span>
+                </div>
+                <ul class="pricing-item-list">
+                    <li>1GB Disk Space</li>
+                    <li>100 Email Account</li>
+                    <li>24/24 Support</li>
+                </ul>
+                <button class="pricing-item-button">purchtion now</button>
+            </div>
+            <div class="clear"></div>
+     </div>
+        
+</div>
+    
+
+<!-- testmonail section -->
+<div class="testmonail pd-y"> <!-- عشان صورة الخلفية -->
+    <div class="overlay"> <!-- دة كلاس عام بيتحط علي الصورة لتقليل الاضاءة -->
+        <div class="contaner"> <!-- عشان الكلام ميلزقش ف الحواف -->
+            <div class="testmonail-item">
+                <div class="testmonail-top">
+                    <img src="images/Testimonial/perso1.webp" alt="">
+                    <h3>amr ebrahim</h3>
+                    <span>web dasine</span>
+                </div>
+                <p>
+                    Molestie at elementum eu facilisis sed odio. Scelerisque in
+                     dictum non consectetur a erat. Aliquam id diam maecenas 
+                     ultricies mi eget mauris.
+                </p>
+            </div>
+            <div class="testmonail-item">
+                <div class="testmonail-top">
+                    <img src="images/Testimonial/perso2.webp" alt="">
+                    <h3>amr ebrahim</h3>
+                    <span>web dasine</span>
+                </div>
+                <p>
+                    Molestie at elementum eu facilisis sed odio. Scelerisque in
+                     dictum non consectetur a erat. Aliquam id diam maecenas 
+                     ultricies mi eget mauris.
+                </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--  Team section-->
+<div class="team pd-y">
+    <!-- scetion headar -->    <!-- كل حاجة في النص -->
+    <div class="scetion-header"> <!-- في حاجتين العنوان و الخط -->
+        <h2 class="scetion-title">Our Team </h2> <!-- كلاس للعنوان -->
+        <span class="line"></span> <!-- كلاس للخط الي تحت العنوان -->
+    </div> <!-- ممكن يتحط جوا كلاس الcontaner عادي --> 
+    <div class="contaner">
+        <div class="team-item ttb-effect">
+            <div class="team-image">
+                <img src="images/team/team1.webp" alt="">
+                    <div class="team-ovellay"> <!-- التاثير الي بيظهر فوق الصورة -->
+                        <a href="#"><i class="fa fa-facebook"></i> </a>
+                        <a href="#"><i class="fa fa-twitter"></i>  </a>
+                        <a href="#"><i class="fa fa-linkedin"></i> </a>
+                    </div>
+            </div>
+            <div class="team-info">
+                <h3>john doe</h3>
+                <span>web desiner</span>
+            </div>  
+        </div>
+        <div class="team-item spaes ttb-effect">
+            <div class="team-image">
+                <img src="images/team/team2.webp" alt="">
+                <div class="team-ovellay"> <!-- التاثير الي بيظهر فوق الصورة -->
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="team-info">
+                <h3>john doe</h3>
+                <span>web desiner</span>
+            </div>  
+        </div>
+        <div class="team-item ttb-effect">
+            <div class="team-image">
+                <img src="images/team/team3.webp" alt="">
+                <div class="team-ovellay"> <!-- التاثير الي بيظهر فوق الصورة -->
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="team-info">
+                <h3>john doe</h3>
+                <span>web desiner</span>
+            </div>  
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-- blog section -->
+<div class="blog pd-y bgcolor">
+  <!-- scetion headar -->    <!-- كل حاجة في النص -->
+    <div class="scetion-header"> <!-- في حاجتين العنوان و الخط -->
+        <h2 class="scetion-title">Recents News </h2> <!-- كلاس للعنوان -->
+        <span class="line"></span> <!-- كلاس للخط الي تحت العنوان -->
+    </div> <!-- ممكن يتحط جوا كلاس الcontaner عادي --> 
+
+
+    <div class="contaner">
+        <div class="blog-item">
+            <div class="image-blog-item">
+                <img src="images/blog/blog1.webp" alt="">
+            </div>
+            <div class="blog-info">
+                <ul class="blog-list">
+                    <li><i class="icon fa fa-user"></i> John doe</li>
+                    <li><i class="icon fa fa-clock-o"></i> 18 Oct</li>
+                    <li><i class="icon fa fa-comments"></i> 57</li>
+                </ul>
+                <h3 class="blog-title">Molestie at
+                elementum eu
+                facilisis sed odio
+                </h3>
+                <p class="blog-desc">Nec feugiat nisl pretium fusce id velit 
+                ut tortor pretium. 
+                Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.
+                </p>
+                <a href="#" class="blog-link">Read more</a>
+            </div>
+        </div>
+        <div class="blog-item">
+            <div class="image-blog-item space">
+                <img src="images/blog/blog2.webp" alt="">
+            </div>
+            <div class="blog-info">
+                <ul class="blog-list">
+                    <li><i class="icon fa fa-user"></i> John doe</li>
+                    <li><i class="icon fa fa-clock-o"></i> 18 Oct</li>
+                    <li><i class="icon fa fa-comments"></i> 57</li>
+                </ul>
+                <h3 class="blog-title">Molestie at
+                elementum eu
+                facilisis sed odio
+                </h3>
+                <p class="blog-desc">Nec feugiat nisl pretium fusce id velit 
+                ut tortor pretium. 
+                Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.
+                </p>
+                <a href="#" class="blog-link">Read more</a>
+            </div>
+        </div>
+        <div class="blog-item">
+            <div class="image-blog-item">
+                <img src="images/blog/blog3.webp" alt="">
+            </div>
+            <div class="blog-info">
+                <ul class="blog-list">
+                    <li><i class="icon fa fa-user"></i> John doe</li>
+                    <li><i class="icon fa fa-clock-o"></i> 18 Oct</li>
+                    <li><i class="icon fa fa-comments"></i> 57</li>
+                </ul>
+                <h3 class="blog-title">Molestie at
+                elementum eu
+                facilisis sed odio
+                </h3>
+                <p class="blog-desc">Nec feugiat nisl pretium fusce id velit 
+                ut tortor pretium. 
+                Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.
+                </p>
+                <a href="#" class="blog-link">Read more</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!-- get section -->
+
+<div class="get pd-y " >
+        <!-- scetion headar -->    <!-- كل حاجة في النص -->
+    <div class="scetion-header"> <!-- في حاجتين العنوان و الخط -->
+        <h2 class="scetion-title">Get In Touch </h2> <!-- كلاس للعنوان -->
+        <span class="line"></span> <!-- كلاس للخط الي تحت العنوان -->
+    </div> <!-- ممكن يتحط جوا كلاس الcontaner عادي --> 
+    <div class="contaner">
+        <div class="get-item">
+            <i class="get-icon fa fa-phone fa-2x"></i>
+            <h3 class="get-phone">Phone</h3>
+            <p class="get-number">512-421-3940</p>
+        </div>
+        <div class="get-item ">
+            <i class="get-icon fa fa-envelope fa-2x"></i>
+            <h3 class="get-phone">email</h3>
+            <p class="get-number">email@support.com</p>
+        </div>
+        <div class="get-item">
+            <i class="get-icon fa fa-map-marker fa-2x"></i>
+            <h3 class="get-phone">addres</h3>
+            <p class="get-number">1739 Bubby Drive</p>
+        </div>
+        <div class="clear"></div>      
+       <!-- <form class="contact-form">
+        <input type="text" class="input" placeholder="Name">
+        <input type="text" class="input" placeholder="Name">
+        <input type="text" class="input" placeholder="Name">
+        <textarea class="input" placeholder="massage"></textarea>   
+        </for   m> -->
+    </div>
+</div>
+
+<!-- ------------------------------- -->
+
+<!-- footer section -->
+<div class="footer">
+    <img src="images/logo-alt.webp" alt="">
+    <ul class="footer-link">
+        <li><a href="#" class="hever-opacity"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#" class="hever-opacity"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" class="hever-opacity"><i class="fa fa-google"></i></a></li>
+        <li><a href="#" class="hever-opacity"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#" class="hever-opacity"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#" class="hever-opacity"><i class="fa fa-facebook"></i></a></li>
+    </ul>
+    <p class="copyright">Copyright © 2017. All Rights Reserved. Designed by 
+        <a href="#" target="_blank">Colorlib</a>
+    </p>
+    
+</div>
+
+</body>
+</html>
+

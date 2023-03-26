@@ -1,0 +1,816 @@
+
+/*  extanhen rainbow tages عشان اخلي الديفات متلونه نزل  */
+/* over flot لحل مشكلو الفلوت */
+/* وهو مسول عن عرض التاثير براحة hoverفي العنصر اللي بيتاثر بال transitionبنحط ال */
+/* 1-common styles الحاجات المشتركة في الموقع
+        1.1-container 
+        1.1.1-overlay 
+        1.2-opacity hover
+        1.3-section header
+        1.4-section padding 
+        1.5-hover effect 1 ( left to right )
+        1.6-hover effect 2 ( top to bottom ) 
+2-general styles الحاجات العامة
+3-sections styles  تقسيمة الصفحة
+      3.0-Header section  اول حاجة بنعملها في الصفحة
+      3.1-home section     تاني حاجة بنعملها في الصفحة
+      3.2-about section    تالت حاجة بنعملها في الصفحة
+      3.3-portfoilo section رابع حاجة بنعملها في الصفحة
+      3.4-service section
+      3.5-prices section
+      3.6-team section
+      3.7-Blog page
+      3.8-contact section
+      3.9-footer section
+*/
+
+/*2- general css styles الحاجات العامة */
+
+*{                  /* unversil selctor كل الموقع */
+    margin: 0;     /* ازاحة خارجية*/
+    padding: 0;    /* ازاحة داخلية*/
+    box-sizing: border-box; /* لو ذوت واحد فيهم ياخد من الطول الموجود */
+    list-style-type: none; /* الدايرة متحطش قبل اي قايمة li */
+}
+body{                   /* خط الموقع */
+    font-family:'Varela Round', sans-serif;
+}
+.clear{ 
+    clear: both;  /* الي بيجيب العناصر جنب بعض float left لحل مشكله ال  */
+}
+:root{  /* الوان الموقع */
+    --maincolor:#6195ff;
+    --graycolor:#999;
+    --bgcolor:#f9f9f9;
+    --whitecolor:#fff
+}
+a{
+    text-decoration: none; /* متحطش خط تحت كل اللينكات */
+}
+.contaner{ /* الديف الي هيتكرر معايا في كل سكشن */ 
+    width: 80%;  /* 80 من حجم الصفحة الاصلي */
+    margin: auto;  /* واسطن عنصر بلوك في نص الصفحة */
+}
+h1,h2,h3,h4,h5,h6{  /* كل العناوين يبقا ليهم خط مخصص */
+    font-family: 'Montserrat', sans-serif;
+} 
+button{  /* كل الزراير يبقا ليهم خط مخصص */
+    font-family:'Varela Round', sans-serif; 
+    font-family: inherit;   /* هاتلي خط الموقع */
+       /* اي واحدة فيهم تنفع */
+}
+.overlay{   /* عنصر فوق عنصر */
+    position: absolute; /*الابن*/
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0,0.7)
+} /* مكتوب تحت بردك */ 
+
+.hever-opacity{   /*  احول لون الخلفية لشفافة في خلال كام ثانية */
+    transition: opacity .5s;/* لازم قبلها نحط اسم الخاصية الي عاوز اعمل ليها تغير */
+}
+.hever-opacity:hover{ /* للتغير */
+    opacity: 0.8;    /* هيتحول من 1 ل.8 في .5 ثانية */
+} /* مكتوب تحت بردك */
+
+/* --------------- */
+.scetion-header{ /* <!-- scetion headar  حاجة عامة لكل السكاشن انها ليها عنوان وكلام تحت العنوان --> */
+    text-align: center; /* اي حاجة جوا السكشن تبقا في النص */
+    margin-bottom:10px  /* السافة بين الهدر كلوا والمتحوي الي تحتة */
+}
+.scetion-header .scetion-title{ /* كلاس العنوان */
+    font-size: 40px;            /* حجم العنوان */
+    text-transform: capitalize; /* اول حرف كابتل في كل كلمه */     
+    margin-bottom: 20px;        /* المسافة بين الكلمه والخط */
+}
+.scetion-header .line { /* كلاس الخط */
+    display:block; /* عشان يبقا علي سطر لواحدة */
+    width: 50px; /* العرض */
+    height: 5px;  /* الطول */
+    margin:0 auto 70px auto; /* auto عشان اوسطنة في نص الصفحة */
+    /* 70 المسافة بين الخط و المحتوي الي تحتي */
+    background-color: var(--maincolor);
+}
+ .pd-y{  /*pd-->  padding ازاحة خارجية هديها لكل السكاشن  */
+    padding: 120px 0; /* من فوق وتحت بس  */
+}
+
+/* ---------------- */
+.ltr-effect{ /* الافكت الي علي الديفات الموجودة في كلاس ال about */
+    position: relative;
+}
+.ltr-effect::after{
+    position: absolute;
+    content: "";
+    width: 0;   /* قبل ما اشاور */
+    top: 0;     /* عشان اخلي التاثير يملي الديف */
+    right: 0;   /* عشان اخلي التاثير يملي الديف */
+    bottom: 0;  /* عشان اخلي التاثير يملي الديف */
+    left: 0;    /* عشان اخلي التاثير يملي الديف */
+    background-color: #333;
+    transition: width .3s ; /* خلي التاثير يتعمل براحة */
+    z-index: -1;  /* خلي التاثير وارة الكلام المكتوب علي الديف */
+}
+.ltr-effect:hover::after{
+    width: 100%;            /* لما اشاور علي الديف خلي العرض يبقا 100 */
+}
+
+
+
+/* ---------------------- */
+
+                 
+/* 3-sections styles */
+/* ------------------------------------------------------------- */
+                    /* 3.0 Header section  اول حاجة بنعملها في الموقع */
+.header{
+    position: fixed;  /* عشان لو في عجلة الهيدر ينزل معايا */
+    width: 100%; /* عرض الهيدر بعرض ديف الكونتينر */
+    z-index: 1; /* اطلع عنصر الهيدر فوق الصورة */
+    background-color: rgba(0, 0, 0, .4);
+
+}
+.header .logo{
+    width: 40%;      /* عرض الصورة بالنسبة للهيدر */
+    float: left;     /* خلي الصورة جنب اللينكات */
+    text-align:left  /* مكان الصورة */
+}
+.header .nav{
+    width: 60%;         /* عرض اللينكات في الهيدر */
+    float: left;        /* خلي اللينكات جنب الصورة */
+    text-align:right;   /* مكان اللينكات  */
+    list-style: none;   /* شيل النقط الي جنب اللينكات */
+}
+.header .logo img {
+    width: 18%; /* عرض الصورة نفسها */
+    margin-top: 15px;  /* نزلها من فوق شوية */
+    margin-left: 130px; /* ازاحة خارجية من الشمال شوية */
+} 
+/* اللينكات */
+.header .nav > li{
+    display:inline-block; /* اللينكات  تتحط جنب بعض */ 
+    text-align: center;    /* تبقا في نص الخط الي تحتها*/
+}
+.header .nav > li > a{
+    color: white;       /* لون اللينكات */
+    display: block;       /* padding لو مكتبتهاش مش هياخد */
+    padding: 20px ;    /* ازاحه داخلية بين اللينكات */
+    margin-top: 8px;  /* نزلها من فوق شوية */
+    font-size: 15px;         /* حجم كلمه اللينك */
+    /* text-decoration: none; */
+}
+/* -------------------------------------------------------------------- */
+
+/* تالت حاجة بنعملها في الموقع الخط الي تحت اللينكات */
+    /* اول كلاس الي الخط معمول في اصلا */
+.header .nav > li > a.active:after
+{    
+    content: " ";       /* الزامية */
+    display: block;     /* الزامية */
+    height: 2px;        /* طول الخط */
+    width: 100%;                   /* يبقا بعرض الكلمه كلها */
+    margin-top: 2px;               /* ازاحه الخط عن الكلمه شوية */
+    background-color: var(--maincolor);   /* لون الخط */
+} 
+    /* باقي الكلاسات */
+.header .nav > li > a:after{
+    content: " ";
+    display: block;
+    height: 2px;
+    width:0px;/* مفيش عرض */
+    margin-top: 2px;
+    background-color: var(--maincolor) ;
+    transition: width .2s;  /* اعملي الخط بعد ثانيتن */
+}
+.header .nav > li > a:hover:after{ /* لما اشارو علي اللينك */
+    width: 100%;   /* خلي العرض يملي الكلمة */
+}
+
+/* شكل تاني للحل  
+ /* الخط الي تحت القايمه */
+                 /* اول كلاس الي الخط معمول في اصلا */
+.header .nav > li > a.active:after,
+.header .nav > li > a:after
+{    
+    content: " ";/* الزامية */
+    display: block;/* الزامية */
+    height: 3px;/* طول الخط */
+    margin-top: 2px;/* ازاحه الخط عن الكلمه شوية */
+    background-color: var(--maincolor) ;/* لون الخط */
+    transition: width .5s;  /* اعملي الخط بعد ثانيتن */
+} 
+.header .nav > li > a.active:after{
+    width: 100%; /* يبقا بعرض الخط كلوا كلها */
+}
+.header .nav > li > a:hover:after{ /* لما اشارو علي اللينك */
+    width: 100%;   /* خلي العرض يملي الكلمة */
+} 
+             /* باقي الكلاسات */
+.header .nav > li > a:after{
+    width:0;/* مفيش عرض */
+}
+
+/* ----------------------------------------------------------------------------- */
+/*  */
+/* رابع حاجة بنعملها في الموقع */
+/* dropdown */
+.dropdown{ /* الاب  */
+    position: relative;
+}
+.dropdown-menu{ /* الابن */
+    position: absolute; /* عشان يخرج برا اطار العمل */
+    background: var(--maincolor) ; /* خلفية الكلمة الي هتظهر */
+    width: 250px; /* عرضها */
+    text-align: left; /* الكلمة تبقا في النص */
+    right:-100%; 
+    top: 100%;
+    padding: 10px;
+    opacity: 0;     /* عشان اخفي الدروب داون */
+    visibility: hidden; /* عشان اخفي الدروب داون  */
+    transition: opacity 0.5s ;
+    list-style: none;   /* شيل النقط الي جنب اللينكات */
+}
+.dropdown-menu a{
+    color: white;
+    display: block; /* لو متحطتش مش هياخد بادج */
+    padding: 10px; /* ازاحة داخلية */
+    font-size: 20px; /* حجم الكلمة */
+}
+.dropdown:hover .dropdown-menu{
+/* لما اشاور علي الدروب داون هاتلي الدروب داون مانيو وغيري فيها  */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ------------------------------------------------------------------------ */
+     /*  3.1home section تاني حاجة بنعملها في الموقع */
+.home{
+    height: 100vh ;/* خلي الفيو 100 في المية من حجم الشاشه */
+    background-image: url(../images/background/background1.webp); /* هات االصورة */
+    background-size:cover ; /*واسطنها متخليش الصورة تتكرر وخليها يدوبك ع قد الشاشة */ 
+    background-attachment: fixed;/* عشان الصورة تنزل وتطلع معايا */
+    position: relative;  /* الاب */  /* عشان اخلي الصورة باهتة */   
+}
+
+.overlay{   /*  عنصر فوق عنصر.. المحتوي فوق الصورة*/
+position: absolute; /*الابن عشان يتاثر بالاب*/
+width: 100%; /* البهتان يبقا بعرض الصورة كلوا */
+height: 100%; /* البهتان يبقا بطول كلها */
+/*top: 0; 
+left: 0;
+مش مهمة اوووي */ 
+background-color: rgba(0, 0, 0,0.7) /* درجة البهتان */
+}   /*  عشان هيتكرر كتير معانا common يفضل يتحط جوا */
+
+.home-content{
+    position: absolute; /*عشان يتاثر بالاب  home ابن ل  */
+    width: 65%; /* كبري الحجم الي اكتب في شوية */
+    left: 50%;                       /* اخلي الكلام في نص الديف بالضبط */
+    top: 50%;                        /* اخلي الكلام في نص الديف بالضبط */
+    transform: translate(-50%,-50%); /* اخلي الكلام في نص الديف بالضبط */
+    /* الشكل دة اسموا hero emage وبيجيب الكلام في منتصف الديف بالضبط */
+    text-align: center;  /*اي كلام جوا كلاس الهوم خليها في النص*/
+}
+
+ .home-title{ /* كلاس العنوان */
+    color: white; /* لون الخط */
+    font-size: 3.1rem; /* حجم الخط */
+    text-transform: uppercase;/* اخلي كل الحروف كابتل */
+}
+.home-desc{ /* كلاس الكلام */
+    margin: 20px 0; /* ازاحه من فوق وتحت بس */
+    color: white; /* لون الكلام ابيض */
+    letter-spacing: 1px; /* ابعد الحروف عن بعض */
+    line-height: 1.5;    /* ابعد السطور عن بعض */ 
+}
+
+.home .btn{             /* كلاس الزرارين */
+    min-width: 185px;   /* اقل عرض*/
+    padding: 15px 15px; /* ازاحه داخلية فوق وتحت */
+    border-radius:10px; /*خلي الحواف دائرية مش اووي*/
+    border: 0;          /*مش عاوز حواف سودة*/
+    cursor: pointer;    /*شكل الموس يتغير لمااقف علي المربع */
+    font-size: 18px;    /* حجم الكلام داخلال المربع */   
+}
+.home .btn-start{                  /* كلاس الزرار الاول */
+    background-color: white;     /* لون خلفية الكلام*/ 
+    margin-right:10px ;            /* ازاحة خارجية من ناحية اليمين*/
+}
+.home .btn-more{                   /* كلاس الزرار التاني */
+    background-color:var(--maincolor) ;    /* لون خلفية الكلام*/
+    color: white;                /* لون الكلام*/
+}
+
+/* الزراير */
+.hever-opacity{   /*  احول لون الخلفية لشفافة في خلال كام ثانية */
+    transition: opacity .5s;/* لازم قبلها نحط اسم الخاصية الي عاوز اعمل ليها تغير */
+}
+.hever-opacity:hover{ /* للتغير */
+    opacity: 0.8;    /* هيتحول من 1 ل.8 في .5 ثانية */
+}
+/*  عشان هيتكرر كتير معانا common يفضل يتحط جوا */
+/* -------------------------------------------------------------- */
+
+
+
+/*  3-2about section خامس حاجة عملناها*/
+    
+.about{
+
+}     
+.about-item{
+    width: 30%;/* كل ديف ياخد تلاتين في المية من الصفحة والعشرة في المية تبقا المسافة الي حوالين الديف التاني */
+    float: left; /* عشان اخليهم جنب بعض */
+    text-align: center; /* اي حاجة جوا الديف تبقا في النص */
+    border: 1px solid #e8e8e8; /* الحواف */
+    padding: 50px 20px; /* مسافة داخلية */    
+}
+.spaes{ /* الديف الي ف النص ياخد مسافو من اليمين والشمال خمسة في المية */
+    margin: 0 5%; /* من اليمين والشمال */
+}
+.about-item .icon{
+    color: var(--maincolor) ;
+    margin-bottom: 10px;
+    
+}
+.about-item .title{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    transition: .3s;     /* غير لون العنوان بعد تلات ثواني من مشاورتي علي الديف */
+}
+.about-item:hover.about-item .title{     /*  لما اشاور علي الديف كلوا يعني اي حتة في المربع */
+ color:white;      /* غير لون العنوان */
+} 
+.about-item .desc{
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #899;
+}
+.about-item .link{
+    color: var(--maincolor) ;
+    text-transform: capitalize;
+}
+/* كدة خلصت السكشن دة بس ناقص الافكت الي بيجي من اليمين الي الشمال علي الديفات ودة هيبقا حاجه عامة */
+
+
+
+
+/* 3.3-portfoilo section سادس حاجة بنعملها في الصفحة */
+.portofolio{
+    background-color: #f9f9f9;
+}
+.portofolio-item{
+    position: relative;
+    width: 33.3%;
+    float: left;
+    margin: 0;
+    padding: 20px;
+}
+.portofolio-item img{
+    width: 100%; 
+}
+
+.portofolio-item .layer-content{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s;
+}
+.layer-info{
+    position: absolute; /* layer-contentابن ل  */
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    width: 35%;
+    text-align: center;
+}
+.layer-content .category{
+    color: var(--maincolor) ;
+    margin-bottom: 7px; 
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    top: 10px;
+    opacity: 0;
+    transition: top .4s, opacity .3s;
+    transition-delay: .5s;
+}
+.layer-content .layer-content-title{
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    display: block;
+    font-size: 30px;
+    top: 10px;
+    opacity: 0;
+    transition: top .4s,opacity .3s;
+    transition-delay: .5s;
+}
+.layer-content i{
+    color: white;
+    width: 40%;
+    height: 40%;
+    background-color: var(--maincolor) ;
+    position: relative;
+    display: inline-block;
+    line-height: 40px; /* اوسطن المحتوي بالطول وياخد نفس طول الاصلي */
+    top: 10px;
+    opacity: 0;
+    transition: top .3s, opacity .3s;
+    transition-delay: .5s, 
+
+}
+.portofolio-item:hover .layer-content{
+    opacity: 1;
+    visibility: visible;
+}
+.portofolio-item:hover .layer-content .category,
+.portofolio-item:hover .layer-content-title,
+.portofolio-item:hover .layer-content i{
+    top: 0px;
+    opacity: 1;
+
+}
+
+
+
+/*  services section */
+.services{
+    background-color: #f9f9f9;
+}
+.services-item{
+    width: 50%;
+    float: left;
+}
+.services-item .scetion-title{
+    text-align: left;
+}
+.services-item .line{
+    margin: 0 0 50px 0;
+}
+.services-item .desc{
+    color: #899;
+    padding-right: 20px;
+    line-height: 1.4;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.services-list li{
+    margin-bottom: 10px;
+}
+
+
+.services-item .services-list{
+    color: #899;
+    list-style: none;
+}
+.services-item .services-list li i{
+    border: 1px solid var(--maincolor) ;
+    color: var(--maincolor) ;
+    padding: 10px 7px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.services-item img{
+    width: 100%;
+}
+.services-bollets{
+    list-style: none;
+    text-align: center;
+}
+.services-bollets li{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #899;
+    margin: 10px 5px;
+    border: 50%;
+} 
+.services-bollets .active{
+    background-color: var(--maincolor) ;
+}
+.services-bollets li:hover{
+    background-color: var(--maincolor) ;
+}
+
+        /* <!--number  section --> */
+.number{
+    position: relative;
+    background-image: url(../images/background/background2.webp);
+    height: 300px; /* عشان الصورة تظهر */
+    background-size: cover; /* عشان الصورة تنزل وتطلع معايا */
+    background-attachment: fixed;/* في الخلفية عشان الصورة تنزل وتطلع معايا */
+}
+.number-item{
+    /* overflow: hidden; clearمكان ال floatممكن نحطها لحل مشكللة ال  */
+}
+.number-item-1{
+    width: 25%;
+    float: left;
+    color: var(--maincolor) ;
+    text-align: center;
+    padding: 100px 0;
+}
+.number-item-1 .icon{
+    margin-bottom: 15px; 
+}
+.number-item-title{
+    color: white;
+    font-weight: bold; /* عشان اتقل  الخط */
+    font-size: 40px;/* اكبر الخط */
+    margin-bottom: 15px;
+}
+.number-item-desc{
+    color: white;
+}       
+
+/* pricing section */
+.pricing{
+
+}
+
+.pricing-item{
+    float: left;
+    width: 30%;
+    border: 1px solid #899;
+    text-align: center;
+    padding: 40px 15px;
+}
+.pricing-item.space{
+    margin: 0 5%;
+}
+.pricing-item-title{
+    text-transform: uppercase;
+    color: #899;
+    font-size: 17px;
+    transition: color .5s;
+}
+.pricing-item-permonce{
+    width: 130px;
+    height:130px;
+    padding: 20px 0;
+    margin: 20px auto;
+    border: 2px solid var(--maincolor) ;
+    border-radius: 50%; /* هيعمل شكل الدايرة */
+    transition: color .2s ; /* خلي التاثير يتعمل براحة */
+
+}
+.pricing-item-permonce .doler{
+    font-size: 50px;
+}
+.pricing-item-permonce .month{
+    text-transform: uppercase;
+    font-weight: bold; /* عشان اتقل  الخط */
+    font-size: 17px;
+}
+.pricing-item-list li{
+    color: #899;
+    line-height: 1.8;
+}
+.pricing-item-button{
+    background-color: none;
+    border: 0;
+    display: block;
+    width: 140px;
+    background-color: white;
+    border: 2px solid var(--maincolor) ;
+    padding: 10px;
+    margin: 15px auto 0 auto;
+    color:var(--maincolor) 
+}
+.ttb-effect{ /* الافكت الي علي الديفات الموجودة في كلاس ال about */
+    position: relative;
+}
+.ttb-effect::after{
+    position: absolute;
+    content: "";
+    height: 0;  
+    top: 0;     /* عشان اخلي التاثير يملي الديف */
+    right: 0;   /* عشان اخلي التاثير يملي الديف */
+    bottom: 0;  /* عشان اخلي التاثير يملي الديف */
+    left: 0;    /* عشان اخلي التاثير يملي الديف */
+    background-color: #333;
+    transition: height .2s ; /* خلي التاثير يتعمل براحة */
+    z-index: -1;  /* خلي التاثير وارة الكلام المكتوب علي الديف */
+}
+.ttb-effect:hover::after{
+    height: 100%;            /* لما اشاور علي الديف خلي العرض يبقا 100 */
+}
+.pricing-item:hover .pricing-item-title{
+    color: var(--maincolor) ;
+}
+.pricing-item:hover .pricing-item-permonce{
+    color: white;
+}
+
+
+/* <!-- testmonail section --> */
+.testmonail{
+    position: relative;
+    background-image:url(../images/background/background3.webp) ;
+    background-attachment:fixed;
+    height: 400px;
+}
+.testmonail-item{
+    float: left;
+    width: 50%;
+    margin: auto; /* عشان اوسطن عنصر واخد عرض */
+    color: #fff;
+    padding: 120px 0;
+
+}
+.testmonail-top{
+    padding: 10px 20px 60px 100px;
+    position: relative;
+}
+.testmonail-top img{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+}
+.testmonail-top h3 {
+    margin: 5px  0;  
+}
+.testmonail-top span{
+    color: var(--maincolor) ;
+}
+.testmonail p{
+
+}
+
+
+/* <!--  Team section--> */
+.team-item{
+float: left;
+width: 30%;
+background-color: #e8e8e8;
+text-align: center;
+padding: 40px 20px;
+}
+
+.team-image{
+position: relative;
+}
+.team-ovellay{
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+background: rgba(0, 0, 0, .5);
+opacity: 0;
+visibility: hidden;
+
+}
+.team-ovellay a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--maincolor) ;
+    color: white;
+    margin-left: auto;
+}
+.team-ovellay a i {
+    margin: 10px;
+}
+.team-info{
+    text-align: center;
+}
+.team-info h3{
+    text-transform: capitalize;
+    margin: 10px 0;
+    transition: color .5s;
+}
+.team-info span{
+    color: #999;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: color .5s;
+}
+.team-item:hover .team-ovellay{
+    opacity: 1;
+    visibility: visible;
+}
+.team-item.ttb-effect{
+    z-index: 1;
+}
+.team-item:hover .team-info h3{
+    color: fff;
+}
+.team-item:hover .team-info span{
+    color: var(--maincolor) ;
+}
+
+
+
+/* <!-- recents section --> */
+.blog{
+    background-color: #f8f8f8;
+}
+
+.blog-item{
+    width: 30%;
+    float: left;
+    background-color: white;
+}
+.image-blog-item img{
+    width: 100%; /* عشان حجم الصورة يصغر */
+}
+.blog-list {
+    margin: 10px 0;
+}
+.blog-list li{
+    display: inline-block; /*  عشان اجيب الايقونات جنب بعض*/
+    margin: 0 5px;
+}
+.blog-list li i{
+    color: var(--maincolor) ;
+}
+.blog-info {
+    padding: 20px;
+}
+.blog-title{
+    font-weight: bold;
+    margin: 20px 0;
+    font-size: 30px;
+}
+.blog-desc{
+    color: #999;
+    margin-bottom: 20px;
+}
+.blog-link{
+    color: var(--maincolor) ;
+}
+
+.blog-item .space{
+    margin: 0 5%;
+}
+    
+
+/* get section */
+.get{
+
+}
+.get-item{
+    float: left;
+    width: 33%; 
+    text-align: center;
+}
+.get-icon{
+    color: var(--maincolor) ;
+}
+.get-phone{
+    margin: 20px 0;
+    font-size: 25px;
+    text-transform:capitalize;
+}
+.get-number{
+    color: #899;
+}   
+.get-Subject{
+width: 100px;
+height: 100px;
+}
+/* footer section */
+.footer{
+    background-color: #1C1D21;
+    text-align: center;
+    padding: 60px 0;
+}
+.footer-link{
+    text-align: center;
+    margin: 20px 0;
+}
+.footer-link li{
+        display: inline-block;
+}
+.footer-link li a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--maincolor) ;
+    color: #fff;
+    margin: 5px;
+    border-radius:50% ;
+}
+.footer-link li a i{
+    line-height: 50px;
+}
+
+.footer .copyright{
+    color: #999;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.footer a{
+    color: var(--maincolor) ;
+}
